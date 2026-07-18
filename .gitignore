@@ -12,6 +12,16 @@ target/
 *.iws
 *.iml
 *.ipr
+# IntelliJ
+.idea/
+*.iml
+out/
+
+# NetBeans
+nbproject/
+nbbuild/
+nbdist/
+build/
 
 ### Eclipse ###
 .apt_generated
