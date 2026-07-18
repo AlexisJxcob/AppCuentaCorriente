@@ -1,16 +1,20 @@
 package Cuentas;
 
 public class CuentaCorriente {
+
     // atributos
     private String titular;
     private Integer saldo; // permite valores null
-    private int numero;
+    private String numero;
 
-    public CuentaCorriente(String titular, int numero) {
+    public CuentaCorriente(String titular, String numero) {
         this.titular = titular;
-        this.saldo = saldo;
-        this.numero = 0;
+        this.saldo = 0;
+        this.numero = numero;
     }
 
-
+    @Override
+    public String toString() {
+        return "Cuenta Corriente : " + "Titular = '" + this.titular + '\'' + ", Número = '" + this.numero + '\'' + '}';
+    }
 }
