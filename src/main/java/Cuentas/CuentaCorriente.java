@@ -26,7 +26,13 @@ public class CuentaCorriente {
     @Override
     public String toString() {
         return (
-            "CuentaCorriente{ Titular = '" + titular + "', Numero de cuenta = '" + numero + "', Saldo = $" + saldo + "}"
+            "CuentaCorriente { Titular = '" +
+            titular +
+            "', Numero de cuenta = '" +
+            numero +
+            "', Saldo = $" +
+            saldo +
+            " }"
         );
     }
 
