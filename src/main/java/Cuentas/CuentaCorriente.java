@@ -18,5 +18,15 @@ public class CuentaCorriente {
         return "Cuenta Corriente : " + "Titular = '" + this.titular + '\'' + ", Número = '" + this.numero + '\'' + '}';
     }
 
-    // para racha
+    public String getTitular() {
+        return titular;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public Integer getSaldo() {
+        return saldo;
+    }
 }
