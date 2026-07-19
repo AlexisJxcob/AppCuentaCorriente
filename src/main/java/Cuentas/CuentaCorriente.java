@@ -15,7 +15,7 @@ public class CuentaCorriente {
         this.numero = numero;
     }
 
-    // saldo inicilizado por el usuario
+    // saldo inicializado por el usuario
     public CuentaCorriente(String titular, String numero, Integer saldo) {
         this.titular = titular;
         this.numero = numero;
@@ -55,11 +55,12 @@ public class CuentaCorriente {
     }
 
     public int abonar(int sumar) {
-        if (sumar >= 0) {
-            System.out.println("Ingrese una cantidad valdia para abonar");
-            return 0;
-        } else {
+        if (sumar > 0) {
+            System.out.println("Ingreso a su cuenta la cantidad de: $" + sumar);
             return sumar;
+        } else {
+            System.out.println("Ingrese una cantidad valida para abonar");
+            return 0;
         }
     }
 
