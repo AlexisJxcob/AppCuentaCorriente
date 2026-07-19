@@ -47,7 +47,12 @@ public class CuentaCorriente {
     }
 
     public void setSaldo(Integer saldo) {
-        this.saldo = saldo;
+        if (saldo != null && saldo < 0) {
+            System.out.println("Error: El saldo no puede ser negativo. Se asignará $0.");
+            this.saldo = 0;
+        } else {
+            this.saldo = saldo;
+        }
     }
 
     public void setNumero(String numero) {
