@@ -29,4 +29,16 @@ public class CuentaCorriente {
     public Integer getSaldo() {
         return saldo;
     }
+
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+
+    public void setSaldo(Integer saldo) {
+        this.saldo = saldo;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
 }
