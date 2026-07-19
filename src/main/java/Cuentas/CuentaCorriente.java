@@ -54,17 +54,26 @@ public class CuentaCorriente {
         this.numero = numero;
     }
 
-    public int abonar(int sumar) {
-        if (sumar > 0) {
-            System.out.println("Ingreso a su cuenta la cantidad de: $" + sumar);
-            return sumar;
+    public void abonar(int cantidad) {
+        if (cantidad > 0) {
+            this.saldo = this.saldo + cantidad;
+            System.out.println(
+                "Ingreso a su cuenta la cantidad de: $" + cantidad + " y su saldo actual es de: $" + this.saldo
+            );
         } else {
-            System.out.println("Ingrese una cantidad valida para abonar");
-            return 0;
+            System.out.println("Error: no se puede abonar una cantidad negativa o cero");
         }
     }
 
-    public int cargar(int restar) {
-        return restar;
+    public void cargar(int cantidad) {
+        int saldoResta = this.saldo - cantidad;
+
+        if (saldoResta < 0) {
+            this.saldo = 0;
+            System.out.println("Se intentó cargar $" + cantidad + ". Saldo insuficiente, tu cuenta queda en: $0");
+        } else {
+            this.saldo = saldoResta;
+            System.out.println("Se han cargado: $" + cantidad + ". Nuevo saldo: $" + this.saldo);
+        }
     }
 }
